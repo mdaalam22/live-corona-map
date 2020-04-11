@@ -95,4 +95,3 @@ function updateMap(){
     
 }
 updateMap();
-setInterval(updateMap, 60000);
