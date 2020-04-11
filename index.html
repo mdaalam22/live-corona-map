@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=PT+Serif+Caption&display=swap" rel="stylesheet">
+    <title>MD Corona Map</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Serif Caption', serif;
+            
+        }
+        #map{
+            height: 90vh;
+            width: 80vw;
+            z-index: 10;
+            border: 3px solid white;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 8px;
+            background-image: url('bg.jpg');
+        }
+        #nepData{
+            margin:10px;
+            width: 200px;
+            height: 250px;
+            
+        }
+        #worldData{
+            margin:10px;
+            width: 200px;
+            height: 250px;
+            
+        }
+        h1{
+            color:white;
+            letter-spacing: 4px;
+            word-spacing: 5px;
+            border-bottom: 4px white solid;
+            margin-bottom: 5px;
+        }
+        .footer{
+            width: 100vw;
+            background-color: bisque;
+            height: 50px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+        .footer a{
+            text-decoration: none;
+            
+        }
+        footer h4{
+            padding: 10px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <h1>Live CoronaVirus Map</h1>
+    <div id='map'></div>
+    <div class="main">
+        <div id="nepData"></div>
+        <div id="worldData"></div>
+    </div>
+
+
+<footer>
+    <div class="footer">
+        <h4>Designed by <a href="https://www.instagram.com/mdaalam22" style="color: red; font-weight: 600;" >Md M Aalam</a> </h4>
+
+    </div>
+</footer>
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWRhYWxhbTIyIiwiYSI6ImNrOHUwb2ZmNzAwdmczZXQ3anRheHM3bm8ifQ.98px4Qb_Lr9lRnZxvMNdGw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom : 1,
+        center:[0,20]
+    });
+</script>
+<script src="index1.js"></script>
+
+</html>
