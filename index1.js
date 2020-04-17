@@ -16,7 +16,7 @@ function updateMap(){
     var totalActive =0;
     var totalDeaths=0;
 
-    fetch("https://corona.lmao.ninja/countries")
+    fetch("https://corona.lmao.ninja/v2/countries")
     .then(response => response.json())
     .then(data => {
         console.log("data loaded");
